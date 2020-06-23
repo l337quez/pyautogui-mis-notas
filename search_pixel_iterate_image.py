@@ -1,5 +1,4 @@
 #si necesitas encontrar un pixel de un screenshot este script te va funcionar
-
 import os, sys, time
 import pyautogui
 from PIL import Image, ImageDraw
@@ -28,19 +27,17 @@ print(width)
 #cargamos la imagen
 img = img.load()
 
+ban= False
 i = 0
-j = 0
-bool= False
-while i<height and bool == False:
-    while j<width and bool == False:
+while i<height and ban==False:
+    j = 0
+    while j<width and ban==False:
         print(img[j,i])
         # si encuentra el color RGB sale
-        if (img[j,i] == (51, 51, 90)) == True:
+        if (img[j,i] == (0, 71, 158)) == True:
             print("Ha encontrado el Pixel (0, 71, 158) ")
-            bool=True
+            ban= True # obliga a salir de los bucles
+            break
+            
         j = j+1
     i = i+1
-
-
-print("salio de los ciclos")
-
