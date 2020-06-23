@@ -13,7 +13,9 @@ while True:
   screenshot= pyautogui.screenshot()
   #buscamos que color de pixel tiene el capture en la psoicion x,y
   color= screenshot.getpixel((704,323))
-  #color que deseamos buscar  (0,71,158)
+  #color que deseamos buscar  (0,71,158) 
   if color == (0,71,158):
     #encotramos el color y salimos del while
     break
+
+  # La respuesta podria ser 4 numeros, es decir una tupla con 4 valores (alpha,R,G,B)
